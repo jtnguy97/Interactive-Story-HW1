@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link href = "styles/styles.css" rel = "stylesheet">
+    </head>
+
+    <body>
+       <h3 id = "socialstats" class = "center"> social stats </h3> <hr>
+        <table class = "center">
+            <tr>
+                <th> &emsp;&emsp;&#129504;&emsp;&emsp; </th>
+                <th> &emsp;&emsp;&#128152;&emsp;&emsp; </th>
+                <th> &emsp;&emsp;&#9917;&emsp;&emsp; </th>
+                <th> &emsp;&emsp;&#128124;&emsp;&emsp;</th>
+                <th> &emsp;&emsp;&#128273;&emsp;&emsp; </th>
+            </tr>
+
+            <tr>
+                <td id='int'>0</td>
+                <td id='ch'>0</td>
+                <td id='ph'>0</td>
+                <td id='ki'>0</td>
+                <td id = 'key'>0</td>
+            </tr>
+
+        </table>
+        
+        <script>
+            var queryString = new URLSearchParams(location.search);
+            int.innerText = queryString.get("int");
+            ch.innerText = queryString.get("ch");
+            ph.innerText = queryString.get("ph");
+            ki.innerText = queryString.get("ki");
+            key.innerText = queryString.get("key");
+        </script>
+
+    </body>
+</html>

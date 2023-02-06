@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title> school simulator </title>
+        <link rel= "icon" href = "assets/favicon.ico"/>
+        <link href = "styles/styles.css" rel = "stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+        <h1 class = "vt323-title-font">lily</h1>
+        <img src = "assets/lily.gif" height = "250" width = "280">
+        <br><br>
+
+        <button id = "lilydialogue" onclick = "lilydialogue()"> talk to lily [3 charm and 3 kindness required] </button>
+        
+        <br>
+        <p id = "credits" class = "main-interactive-text vt323-font"></p>
+        
+        <p class = "left">
+            <a id = "rooftop" href = "rooftop.html"><button> rooftop </button></a>
+            <a id = "exit" href = "school.html"><button> map </button></a>
+        </p>
+        
+        <iframe src = "inventory.html" id = inventory height = 110 width = 340></iframe>
+
+        <audio autoplay loop id = "bgm" >
+            <source src = "assets/talk.mp3">
+        </audio>
+
+
+        <h5 class = "vt323-credits" style = "text-align: left;" > 
+            <ul style = "list-style-type: circle;">
+            <li>Music: swipesy cakewalk by E's jammy jams</li>
+            <li>Music promoted by Chillpeach : https://youtu.be/o9_Gu3TI4IY</li>
+            </ul>
+        </h5>
+        
+        <script>
+            inventory.src += location.search
+            exit.href += location.search
+            rooftop.href += location.search
+            
+            var audio = document.getElementById("bgm");
+            audio.volume = 0.5;
+
+            var queryString = new URLSearchParams(location.search);
+            var ch = +queryString.get("ch");
+            var ki = +queryString.get("ki")
+
+            function lilydialogue(){
+                if(ch >= 3 && ki >=3){
+                    credits.innerHTML = "you overhear lily talking about leon.<br> she looks upset and yells at you to leave her alone!"
+                }
+                else if(ch<3 || ki<3){
+                    credits.innerHTML = "you don't have enough charm or kindness stats to start a conversation"
+                }
+            
+            }
+
+        </script>
+    </body>
+
+
+</html>

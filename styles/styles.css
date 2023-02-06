@@ -1,0 +1,114 @@
+#socialstats{
+    text-align: center;
+    padding-top: 10;
+}
+
+#int, #ch, #ph, #ki, #key{
+    text-align: center;
+}
+
+.vt323-title-font{
+font-family: "VT323", monospace;
+letter-spacing: 10;
+font-size: 40;
+padding-top: 5;
+}
+
+.vt323-font{
+    font-family: "VT323", monospace;
+    letter-spacing: 1;
+    font-size: 18;
+}
+
+.vt323-credits{
+    font-family: "VT323", monospace;
+    letter-spacing: 1;
+    font-size: 12;
+}
+
+.trans{
+    opacity: 0.9
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+th, td, h3 {
+    font-family: "VT323", monospace;
+    letter-spacing: 1;
+    font-size: 13;
+}
+
+#fields, #firstfloor, #secondfloor, #thirdfloor, #rooftop{
+    color: black;
+    margin-left: 10;
+    margin-right: 10;
+}
+
+#exit{
+    color: black;
+}
+
+body{
+    background-color:#DDC1D7;
+    color: black;
+    text-align: center;
+}
+
+
+.left{
+    display: flex;
+    justify-content: flex-start;
+}
+
+button{
+    margin-left: 10;
+    margin-right: 10;
+    background-color: black;
+    color: white;
+    border-radius: 12px;
+    font-family: "VT323", monospace;
+    letter-spacing: 2;        
+    font-size: 15;
+    padding: 4;
+}
+
+button:hover{
+    background-color: #D7EEFF; 
+    color: black;      
+}
+
+button.credit{
+    background:none; border:none;
+    font-size: 16
+} 
+button.maincredit{
+    background:none; border:none;
+    font-size: 25
+}
+
+.interactive-text{
+    color: black;
+    letter-spacing: 2;
+}
+
+.main-interactive-text{
+    color: black;
+    font-size: 16;
+    letter-spacing: 2;
+}
+
+.separator{
+    padding-top: 10;
+    padding-bottom: 5
+}
+
+h5{
+    display: flex;
+    justify-content: flex-start ;
+    letter-spacing: 2;
+}
+

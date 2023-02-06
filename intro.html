@@ -1,0 +1,50 @@
+<html>
+
+    <head>
+        <title> school simulator </title>
+         <link rel= "icon" href = "assets/favicon.ico"/>
+         <link href = "styles/styles.css" rel = "stylesheet">
+         <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <h1 class = "vt323-title-font"> rise and shine! </h1>
+       
+       <h4 class = "vt323-font"> you are a <button onclick = "interaction()" class = "maincredit">student</button>&#129060; at lotus high
+        <p id = "credits" class = "main-interactive-text"></p>
+    </h4>
+<!-- change img pic!!-->
+       <img src = "assets/intro.gif" height = "250" width="280">
+
+        <h4>
+            <a href = "school.html?int=1&ch=1&ph=1&ki=1&key=0"><button> wake up </button><br></a>
+
+            &#129029;
+            <p class = "separator"></p>
+        </h4>
+    
+        <h5 class = "vt323-credits" style = "text-align: left;">
+            <ul style = "list-style-type: circle;">
+                <li>https://dova-s.jp/bgm/play16680.html by『yuhei komatsu』</li>
+                <li>https://free-blo.com/</li>
+    </ul>
+    </h5>
+    
+            <audio autoplay loop volume id = "bgm">
+                <source src = "assets/雨音のワルツ.mp3">
+            </audio>
+        
+        <script>
+            var audio = document.getElementById("bgm");
+            audio.volume = 0.2;
+
+            function interaction(){
+                credits.innerHTML = (
+                    `WAKE UP ! ! <br> it feels like today will be a lucky day `
+                )
+            }
+        </script>
+
+    </body>
+
+</html>

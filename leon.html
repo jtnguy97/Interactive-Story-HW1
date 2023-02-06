@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title> school simulator </title>
+        <link rel= "icon" href = "assets/favicon.ico"/>
+        <link href = "styles/styles.css" rel = "stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+        <h1 class = "vt323-title-font">best friend leon</h1>
+
+        <img src = "assets/leon.gif" height = "250" width = "280">
+        <br><br>
+
+        <button id = "leondialogue" onclick = "leondialogue()"> talk [3 charm and 3 physical required]</button>
+        <br>
+        <p id = "credits" class = "main-interactive-text vt323-font"></p>
+
+
+        <p class = "left">
+            <a id = "firstfloor" href = "firstfloor.html"><button> first floor </button></a>
+            <a id = "exit" href = "school.html"><button> map </button></a>
+        </p>
+        
+      
+        <iframe src = "inventory.html" id = inventory height = 110 width = 340></iframe>
+      
+        <audio autoplay loop id = "bgm" >
+            <source src = "assets/talk.mp3">
+        </audio>
+
+
+        <h5 class = "vt323-credits" style = "text-align: left;" > 
+            <ul style = "list-style-type: circle;">
+            <li>Music: swipesy cakewalk by E's jammy jams</li>
+            <li>Music promoted by Chillpeach : https://youtu.be/o9_Gu3TI4IY</li>
+            </ul>
+        </h5>
+
+        <script>
+            inventory.src += location.search
+            exit.href += location.search
+            firstfloor.href += location.search
+            
+            
+            var audio = document.getElementById("bgm");
+            audio.volume = 0.5;
+
+            var queryString = new URLSearchParams(location.search);
+            var ch = +queryString.get("ch");
+            var ph = +queryString.get("ph");
+
+            function leondialogue(){
+                if(ch >= 3 && ph >=3){
+                    credits.innerHTML = "leon is excited to see you!<br> you bring up lily, a classmate, and leon gets upset.<br> he leaves to go to class on the third floor."
+                }
+                else if(ch < 3 || ph <3){
+                    credits.innerHTML = "you don't have enough charm or phsyical stats to start a conversation"
+                }
+            }
+        
+        </script>
+    </body>
+
+
+</html>

@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title> school simulator </title>
+         <link rel= "icon" href = "assets/favicon.ico"/>
+        <link href = "styles/styles.css" rel = "stylesheet">
+         <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    </head>
+    
+    <body>
+        <h1 class = "vt323-title-font"> garden </h1>
+        
+        <h4 class = "vt323-font">  you see that there's a garden on the rooftop </h4>
+       
+        <img src = "assets/garden.gif" height = "230" width="270">
+      
+        <p id = "credits" class = "main-interactive-text vt323-font"></p>
+        
+        <button onclick = "garden()"> water the plants [increases kindness and charm]</button>
+
+        <p class = "left">
+            <a id = "rooftop" href = "rooftop.html"><button> rooftop </button></a>
+            <a id = "exit" href = "school.html"><button> map </button></a>
+        </p>
+        
+        <iframe src = "inventory.html" id = inventory height = 110 width = 340></iframe>
+
+        <h5 class = "vt323-credits" style = "text-align: left;">
+            <ul style = "list-style-type: circle;">
+                <li>Music:Retro by Wayne jones</li>
+                <li>Music provided by chillpeach:https://youtu.be/zT50dvlYUBQ</li>
+
+    </ul>
+    </h5>
+
+    <audio autoplay loop volume id = "bgm">
+        <source src = "assets/activity.mp3">
+    </audio>
+
+        <script>
+            inventory.src += location.search
+            exit.href += location.search
+            rooftop.href += location.search
+
+            var audio = document.getElementById("bgm");
+            audio.volume = 0.5;
+            
+            var queryString = new URLSearchParams(location.search);
+            var ki =+queryString.get("ki");
+            var ch =+queryString.get("ch");
+
+            function garden(){
+                queryString.set('ki', ki+1);
+                queryString.set('ch', ch+1);
+                inventory.src = 'inventory.html?'+queryString;
+                credits.innerHTML = "you have a green thumb! <br> the plants will miss you, so come back again! ^_^";
+                exit.href = "school.html?"+queryString;
+                rooftop.href = "rooftop.html?"+queryString;
+            }
+        </script>
+    </body>
+
+
+</html>

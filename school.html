@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title> school simulator </title>
+        <link rel= "icon" href = "assets/favicon.ico"/>
+        <link href = "styles/styles.css" rel = "stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=VT323&display=swap" rel="stylesheet">
+        
+    </head>
+    
+    <body>
+        <h1 class = "vt323-title-font"> lotus high </h1>
+        <h4 class = "vt323-font"> you arrived at the entrance of the school!</h4>
+        <img src = "assets/entrance.gif" height = "230" width="330">
+        <br><br>
+            <a id = "fields" href = "fields.html"> <button> school field </button></a>
+            <a id = "firstfloor" href = "firstfloor.html"> <button> first floor </button></a>
+            <a id = "secondfloor" href = "secondfloor.html"> <button> second floor </button></a>
+            <a id = "thirdfloor" href = "thirdfloor.html"> <button> third floor </button></a>
+            <a id = "rooftop" href = "rooftop.html"> <button> rooftop </button></a>
+    
+        <p class = "separator"></p>
+        <p class = "left">
+            <a id = "exit" href = "intro.html"><button>	&#129168; go back </button></a>
+        </p>
+        
+    
+        <iframe src = "inventory.html" id = inventory height = 110 width = 340></iframe>
+
+        <br><br>
+        
+        <h5 class = "vt323-credits" style = "text-align: left;" > 
+            <ul style = "list-style-type: circle;">
+            
+              <li>Music: swipesy cakewalk by E's jammy jams</li>
+              <li>Music promoted by Chillpeach : https://youtu.be/o9_Gu3TI4IY</li>
+             
+          </ul>
+  
+          </h5>
+        <audio autoplay loop id = "bgm" >
+            <source src = "assets/talk.mp3">
+        </audio>
+
+        <script>
+            inventory.src += location.search;
+            exit.href += location.search;
+            fields.href += location.search;
+            firstfloor.href += location.search;
+            secondfloor.href += location.search;
+            thirdfloor.href += location.search;
+            rooftop.href += location.search;
+            
+            var audio = document.getElementById("bgm");
+            audio.volume = 0.5;
+
+        </script>
+    </body>
+
+
+</html>

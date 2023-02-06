@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title> school simulator </title>
+        <link rel= "icon" href = "assets/favicon.ico"/>
+        <link href = "styles/styles.css" rel = "stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    </head>
+    
+    <body>
+        <h1 class = "vt323-title-font"> classroom </h1>
+        <!--<img src = "assets/forest.gif" width = "480">-->
+
+        <h4 class = "vt323-font"> lecture is about to start </h4>
+        
+        <img src = "assets/class.gif" height = "230" width="270">
+        <p id = "credits" class = "main-interactive-text vt323-font"></p>
+
+        <button onclick = "attendclass()"> attend class [increases intelligence] </button>
+
+        <p class = "left">
+            <a id = "secondfloor" href = "secondfloor.html"><button> second floor </button></a>
+            <a id = "exit" href = "school.html"><button> map </button></a>
+        </p>
+
+        <iframe src = "inventory.html" id = inventory height = 110 width = 340></iframe>
+
+        <h5 class = "vt323-credits" style = "text-align: left;">
+            <ul style = "list-style-type: circle;">
+                <li>Music:Retro by Wayne jones</li>
+                <li>Music provided by chillpeach:https://youtu.be/zT50dvlYUBQ</li>
+
+    </ul>
+    </h5>
+
+        <audio autoplay loop volume id = "bgm">
+            <source src = "assets/activity.mp3">
+        </audio>
+
+        <script>
+            inventory.src += location.search
+            exit.href += location.search
+            secondfloor.href += location.search
+            
+            var audio = document.getElementById("bgm");
+            audio.volume = 0.5;
+
+            var queryString = new URLSearchParams(location.search);
+            var int = +queryString.get("int");
+            var ch = +queryString.get("ch");
+
+            function attendclass(){
+                queryString.set("int", int+1);
+                queryString.set("ch", ch+1);
+                inventory.src = 'inventory.html?'+queryString;
+                credits.innerHTML = "you feel smarter! rest your brain.";
+                exit.href = "school.html?"+queryString;
+                secondfloor.href = "secondfloor.html?"+queryString;
+            }
+
+
+        </script>
+    </body>
+
+</html>

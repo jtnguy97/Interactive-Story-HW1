@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title> school simulator </title>
+         <link rel= "icon" href = "assets/favicon.ico"/>
+        <link href = "styles/styles.css" rel = "stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <h1 class = "vt323-title-font" > cleaning closet</h1> 
+        <h4 class = "vt323-font"> you hear a sound from inside the closet </h4>
+
+       <a id = "door" href = "#">
+        <img id = "doorImage" onclick = "openDoor()" src = "assets/locked-door.gif" height = "230" width="270">
+       </a>
+       <br><br>
+       &#129029;
+
+       <p id = "credits" class = "main-interactive-text vt323-font"></p>
+
+    <p class = "left">
+        <a id = "thirdfloor" href = "thirdfloor.html"><button> third floor </button></a>
+        <a id = "exit" href = "school.html"><button> map </button></a>
+    </p>    
+
+        <iframe src = "inventory.html" id = inventory height = 110 width = 340></iframe>
+        
+        <h5 class = "vt323-credits" style = "text-align: left;">
+            <ul style = "list-style-type: circle;">
+                <li>Fairytale - Cinematic trailer by Samuel Plachtinsky</li>
+                <li>https://soundcloud.com/samkoplachtinsky </li>
+            <li> Music provided by https://www.plugnplaymusic.net</li>
+               
+    </ul>
+    </h5>
+
+    <audio autoplay loop volume id = "bgm">
+        <source src = "assets/closet.mp3">
+    </audio>
+
+
+        <script>
+            inventory.src += location.search
+            exit.href += location.search 
+            thirdfloor.href += location.search
+
+            var audio = document.getElementById("bgm");
+            audio.volume = 0.4;
+
+            var queryString = new URLSearchParams(location.search);
+            var key = +queryString.get("key");
+
+            function openDoor(){
+                if (doorImage.src.includes('unlocked-door')){
+                    door.href = 'closet-inside.html?'+queryString;
+                }
+                else if (key > 0){
+                    doorImage.src='assets/unlocked-door.gif'
+                    credits.innerHTML = `the closet unlocked. but the key broke apart.`
+                    queryString.set('key',--key);
+                    inventory.src = 'inventory.html?'+queryString;
+                    exit.href = 'school.html?'+queryString;
+                    thirdfloor.href = "thirdfloor.html?" +queryString;
+                }
+                else {
+                    credits.innerHTML = `the door is locked`;
+                }
+                }
+
+        </script>
+    
+    </body>
+</html>

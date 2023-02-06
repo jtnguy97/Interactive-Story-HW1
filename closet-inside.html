@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title> school simulator </title>
+         <link rel= "icon" href = "assets/favicon.ico"/>
+        <link href = "styles/styles.css" rel = "stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    </head>
+
+
+
+    <body style = "color:white; background-color: black;">
+        <h1 class = "vt323-title-font">im sorry</h1> 
+        <h4 class = "vt323-font"> you see your best friend leon standing above someone's body before you pass out. <br>i wish you didnt have to find out.</h4>
+
+       <img src = "assets/end.png" height = "380" width="320">
+
+       <br>
+        <a href = "index.html">
+            <br><button style = "background-color: white; color:black"> wake up </button><br>
+        </a>
+        
+        <h5 class = "vt323-credits" style = "text-align: left; color:white">
+            <ul style = "list-style-type: circle;" >
+                <li>Music used :  "Broken Piano " composed and produced by "Vivek Abhishek"</li>
+                <li>Music link : https://youtu.be/ln_a4bwRF9o</li>
+                <li>SUBSCRIBE us on YOUTUBE: https://youtu.be/DQQmmCl8crQ</li>
+                <li>Follow on Facebook: https://bit.ly/33RWRtP</li>
+                <li>Follow on Instagram: https://bit.ly/2ImU2JV</li>
+
+                <br>
+
+                <button onclick = "interaction()" class = "credit">notes</button>&#129060;</li>
+                <p id = "credits" class = "vt323-credits interactive-text" style = "color:white"></p>
+            </ul>
+        </h5>
+        
+        <audio autoplay loop volume id = "bgm">
+            <source src = "assets/brokenpiano.mp3">
+        </audio>
+    
+    </body>
+
+    <script>
+
+        var audio = document.getElementById("bgm");
+        audio.volume = 0.4;
+
+        function interaction(){
+            credits.innerHTML = (
+            `<p>&emsp; SURPRISE ! ! this is a horror game disguised as a school simulator!
+            <br><br>&emsp; you are the main character and your best friend leon is in love with you, maybe in a dangerous way
+            <br><br>&emsp; this art of leon on this page here is my favorite out of all the art i worked on for this assignment!
+            <br><br>&emsp; this was actually my first time trying out animation and i used 3-4 frames for each animation. 
+            <br><br>&emsp; thank you for playing through my HTML + CSS game and i hope you enjoyed it as much as i enjoyed creating it!
+             </p>
+            `
+        );
+}
+
+    </script>
+
+
+
+    </html>

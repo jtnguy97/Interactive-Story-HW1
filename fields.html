@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title> school simulator </title>
+        <link rel= "icon" href = "assets/favicon.ico"/>
+        <link href = "styles/styles.css" rel = "stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    </head>
+    
+    <body>
+        <h1 class = "vt323-title-font">school field</h1>
+        <!--<img src = "assets/forest.gif" width = "480">-->
+        <h4 class = "vt323-font"> you are at the<button onclick = "interaction()" class = "maincredit">school field</button>&#129060 and see school athletes training</h4>
+        
+        <div style = "display:flex; justify-content: center; ">
+        <img id = "soccerimg" src = "assets/soccer.gif" height = "120" width="120" style = "display:none">&emsp;
+        &ensp;<img id = "coachimg" src = "assets/coach.gif" height = "120" width="120" style = "display:none">
+        </div>
+
+        <p>
+            &ensp;&emsp; <a id = "soccer" href = "soccer.html"> <button> play soccer </button></a>
+            &nbsp; <a id = "coach" href = "coach.html"> <button> talk to the coach </button></a>
+        </p>
+
+        <p class = "left">
+            <a id = "exit" href = "school.html"><button> &#129168; map </button></a>
+        </p>
+    
+        <iframe src = "inventory.html" id = inventory height = 110 width = 340></iframe>
+
+
+        <h5 class = "vt323-credits" style = "text-align: left;">
+            <ul style = "list-style-type: circle;">
+                <li>Track : Naptime! - https://youtu.be/3fBloNLBL2Y</li>
+                <li>Music provided by BGM President</li>
+                <li>Promoted by: Free Music Download https://youtube.com/channel/UCXY5qqor...</li>
+                <li>Download link: http://bit.ly/2Yl1FVj</li>
+                <li>Video link: https://youtu.be/7RwD9R66zLM</li>
+    </ul>
+    </h5>
+         
+        <audio autoplay loop volume id = "bgm">
+            <source src = "assets/location.mp3">
+        </audio>
+        
+        <script>
+            inventory.src += location.search;
+            exit.href += location.search;
+            soccer.href += location.search;
+            coach.href += location.search;
+           
+            var audio = document.getElementById("bgm");
+            audio.volume = 0.6;
+             
+             function interaction(){
+                document.getElementById("soccerimg").style.display="block";
+                document.getElementById("coachimg").style.display="block";
+            }
+            
+        </script>
+    </body>
+
+
+</html>

@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title> school simulator </title>
+        <link rel= "icon" href = "assets/favicon.ico"/>
+        <link href = "styles/styles.css" rel = "stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+
+    <body>
+     <h1 class = "vt323-title-font"> school days </h1>
+<br>
+    <h4 class = "vt323-font"> peaceful day at school  </h4>
+    <img src = "assets/index.png" height = "250" width="280">
+    <p>
+        <a href = "intro.html">
+            <br><button> start game </button>
+        </a>
+    </p>
+
+<h5 class = "vt323-credits" style = "text-align: left;"> 
+<ul style = "list-style-type: circle;">
+    <br><li>art, code, & story by:<button onclick = "interaction()" class = "credit">jenny</button>&#129060;</li>
+    <p id = "credits" class = "vt323-credits interactive-text"></p>
+
+    <li>https://dova-s.jp/bgm/play16680.html by『yuhei komatsu』</li>
+    <li>https://free-blo.com/</li>
+</ul>
+</h5>
+
+<audio autoplay loop volume id = "bgm">
+    <source src = "assets/雨音のワルツ.mp3">
+</audio>
+
+<script>
+var audio = document.getElementById("bgm");
+audio.volume = 0.2;
+
+function interaction(){
+    credits.innerHTML = (
+    ` this was a very fun project to work on. i really enjoyed creating the artwork for this html game ! ! 
+      `
+    );
+}
+</script>
+
+    </body>
+</html>
